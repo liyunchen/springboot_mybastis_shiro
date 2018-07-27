@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   
+   
+   
+      <div th:with="firstPer=${prods[0]},secondPer=${prods[1]}">
+        <p>
+        The name of the first person is <span th:text="${firstPer.username}">Julius Caesar</span>.
+        </p>
+        <p>
+        But the name of the second person is
+        <span th:text="${secondPer.username}">Marcus Antonius</span>.
+       </p>
+     </div>
+  <!--  <div th:with="firstPer=${prods[0]}">
+        <p>
+        The name of the first person is <span th:text="${firstPer.username}">Julius Caesar</span>.
+        </p>
+     </div>
+    -->
+     <!-- <div th:fragment="frag (onevar,twovar)">
+        <p th:text="${onevar} + ' - ' + ${twovar}">...</p>
+     </div>
+
+     <div th:replace="::frag (${user.id},${user.username})">...</div>
+     <div th:replace="::frag (onevar=${name},twovar=${age})">...</div> -->
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <!-- <footer th:fragment="copy">
+         <script type="text/javascript" th:src="@{/plugins/jquery/jquery-3.0.2.js}"></script>
+      </footer>
+      
+      <div th:insert="footer :: copy"></div>
+ 
+      <div th:replace="footer :: copy"></div>
+ 
+      <div th:include="footer :: copy"></div> -->
+    <!-- <h1>test1</h1><br> -->
+    
+    
+    <!-- <div th:fragment="copy">
+             &copy; 2011 The Good Thymes Virtual Grocery
+    </div>
+    <div th:insert="~{footer :: copy}"></div> -->
+     <!-- <div th:switch="${user.username}">
+           <p th:case="'admin'">User is an administrator</p>
+           <p th:case="${name}">User is a manager</p>
+           <p th:case="*">User is some other thing</p>    --默认的 case 相当于default
+       </div> -->
+    
+    
+    
+    
+      <!-- <a href="comments.html" th:href="@{/comments(prodId=${user.id})}" th:unless="${not #lists.isEmpty(user.username)}">view</a>
+      <a href="comments.html"  th:href="@{/product/comments(prodId=${user.id})}"   th:if="${not #lists.isEmpty(user.username)}">view</a>
+      -->
+    <!-- <span th:whatever="${user.username}">...</span> -->
+    <!-- <input type="text" value="Subscribe!" th:attr="value=${user.username}"/>
+    
+    <h1 th:class="${name}"></h1> -->
+    <!-- <h1 th:text="${name}"></h1><br>
+    <h1 th:text="${age}"></h1><br>
+    <h1 th:text="${user.id}"></h1><h1 th:text="${user.username}"></h1> -->
+   <!-- <a href="product/list.html" th:href="@{/product11/list}">Product2 List</a>
+   <a href="details.html" th:href="@{/order/{orderId}/details(orderId=${user.id})}">view</a>
+   <span th:text="'working web application'"></span> -- 输出字符<br>
+    <span th:text="2013 + 2"></span>  -- 输出数据表达式
+   <div th:if="${user.id} >2">
+        1232435
+   </div>
+   <table>
+      <tr th:class="${user.id} > 2 ? 'even' : 'odd'">
+		...  
+	 </tr>
+   </table> -->
+<!--    <span th:text="'Welcome to our application, ' + ${user.username} + '!'"></span> -->
+
+    <!-- <table>
+        <tr th:each="prod : ${prods}">
+		     <td th:text="${prod.id}"></td>
+		     <td th:text="${prod.username}"></td>
+		</tr>
+     </table> -->
+</body>
+</html>
